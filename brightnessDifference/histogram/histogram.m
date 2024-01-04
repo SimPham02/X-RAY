@@ -9,12 +9,7 @@ for i = 1:numel(img_files)
     img_path = fullfile(folder_path, img_files(i).name);
     img = imread(img_path);
 
-    % chuyển sang ảnh xám
-    %if size(img, 3) == 3
-    %    img = rgb2gray(img);
-    %end
-
-    % sử dụng disteq để chuẩn hoá histogram
+    % sử dụng histeq để chuẩn hoá histogram
     img_histeq = histeq(img);
 
     % Hiển thị và lưu ảnh gốc và ảnh đã chuẩn hóa histogram

@@ -29,7 +29,7 @@ for i = 1:numel(img_files)
 
     % Tạo tên tệp mới để lưu ảnh đã chuẩn hóa histogram
     [~, name, ext] = fileparts(img_files(i).name);
-    new_filename = [name '_histeq' ext];
+    new_filename = [name '_result' ext];
 
     % Lưu ảnh đã chuẩn hóa histogram
     imwrite(img_histeq_uint8, fullfile('result', new_filename));
