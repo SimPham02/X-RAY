@@ -4,7 +4,8 @@ img_files = dir(fullfile(folder_path, '*.tiff'));
 for i = 1:numel(img_files)
     img_path = fullfile(folder_path, img_files(i).name);
     img = imread(img_path);
-
+    
+    %Tạo ma trận 3x3 và các phần tử bằng -1
     kernel = -1*ones(3);
     kernel(2,2) = 11;
     enhancedImage = imfilter(img, kernel);

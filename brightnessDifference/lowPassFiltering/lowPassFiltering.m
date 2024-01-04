@@ -7,10 +7,10 @@ for i = 1:numel(img_files)
     img_path = fullfile(folder_path, img_files(i).name);
     img = imread(img_path);
 
-    % Tạo bộ lọc trung bình
+    % ma trận gaussian
     filter = fspecial('gaussian', [7 7], 2);
     
-    % Áp dụng bộ lọc trung bình để tăng độ sáng
+    % Áp dụng ma trận lọc Gaussian lên ảnh
     output_image = imfilter(img, filter);
     output_image = output_image * 3.5;
     
