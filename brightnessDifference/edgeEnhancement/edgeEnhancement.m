@@ -19,7 +19,7 @@ for i = 1:numel(img_files)
     
     subplot(2, 1, 2);
     imshow(enhancedImage);
-    title('Ảnh Sau Low-pass Filtering');
+    title('Ảnh Sau xử lý');
     
     % Chuyển đổi ảnh về kiểu dữ liệu uint8
     img_histeq_uint8 = im2uint8(enhancedImage);
