@@ -3,8 +3,10 @@ close all;
 
 I = imread('../../../img/20220429160717.tiff');
 
-% thêm salt và pepper
-I = imnoise(I,'salt & pepper',0.1);
+% thêm nhiễu
+I = imnoise(I, 'gaussian', 0.1);
+%I = imnoise(I,'speckle',0.1);
+%I = imnoise(I,'salt & pepper',0.1);
 
 figure(1), imshow(I); title('Img');
 
