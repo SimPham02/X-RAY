@@ -10,6 +10,7 @@ figure(1), imshow(I); title('Img');
 
 % sử dụng lọc trung bình median filter
 tic
+disp('---------');
 disp('median filter');
 K = medfilt2(I);
 figure(2), imshow(K); title('Median Filter');
@@ -17,6 +18,7 @@ toc
 
 % sử dụng wiener2 filter
 tic
+disp('---------');
 disp('wiener2 filter');
 J = im2gray(I);
 K = wiener2(J,[5 5]);
@@ -25,6 +27,7 @@ toc
 
 % sử dụng imdiffusefilt (lọc khuếch tán)
 tic
+disp('---------');
 disp('imdiffusefilt');
 K = imdiffusefilt(I);
 figure(4), imshow(K); title('imdiffusefilt Filter');
@@ -39,6 +42,7 @@ toc
 
 % sử dụng imgaussfilt (lọc khuếch tán)
 tic
+disp('---------');
 disp('imgaussfilt');
 K = imgaussfilt(I,2);
 figure(5), imshow(K); title('imgaussfilt Filter');
